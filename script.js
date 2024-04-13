@@ -21,6 +21,7 @@ async function checkWeather(city) {
     document.querySelector(".temp").innerHTML = tempCelcius + "°C";
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
     document.querySelector(".pressure").innerHTML = data.main.pressure;
+    document.querySelector('.feels-like').textContent = 'Feels like: ' + feelsLike;
 
     if (data.weather[0].main === "Clouds") {
       weather_icon.src = "image/cloud.png";
